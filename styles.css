@@ -509,3 +509,38 @@ textarea {
     align-items: flex-start;
   }
 }
+
+.article-panel {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.article-panel h2 {
+  margin: 0 0 14px;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.article-panel p,
+.article-list li {
+  font-family: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.article-list {
+  margin: 18px 0 24px;
+  padding-left: 22px;
+}
+
+.article-list li + li {
+  margin-top: 10px;
+}
+
+.card h4 a {
+  display: inline-block;
+}
+
+.card h4 a:hover {
+  color: var(--gold-deep);
+}

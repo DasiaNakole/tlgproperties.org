@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Legacy Group LLC | Client Sign In & Sign Up</title>
+    <title>The Legacy Group LLC | Client Portal</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -34,11 +34,16 @@
         <section class="hero">
           <article class="hero-card reveal">
             <div class="eyebrow">Client Portal</div>
-            <h2>Secure access to your buying and selling journey.</h2>
+            <h2>Track your transaction and upload paperwork in one place.</h2>
             <p>
-              Sign in to view saved homes, documents, and updates, or create a client account to
-              get matched with listings and planning resources.
+              This portal is designed for secure document sharing and milestone visibility. Clients
+              can upload files and review progress, while checklist updates stay managed by Juanita
+              and the admin side.
             </p>
+            <div class="cta-row">
+              <a class="btn primary" href="#portal-tools">Open Portal Preview</a>
+              <a class="btn ghost" href="admin-login.html">Admin Login</a>
+            </div>
           </article>
           <article class="panel reveal">
             <h3>Client Sign In</h3>
@@ -49,12 +54,13 @@
               <input id="signin-password" name="signin-password" type="password" placeholder="Password" />
               <button class="btn primary" type="submit">Sign In</button>
             </form>
+            <p class="small-note">Need access? Request your portal account below.</p>
           </article>
         </section>
 
-        <section class="section two-col">
+        <section class="section two-col" id="portal-tools">
           <article class="panel reveal">
-            <h3>Create Account</h3>
+            <h3>Request Portal Access</h3>
             <form>
               <label for="signup-name">Full Name</label>
               <input id="signup-name" name="signup-name" type="text" placeholder="Your full name" />
@@ -64,17 +70,94 @@
               <input id="signup-phone" name="signup-phone" type="tel" placeholder="(555) 123-4567" />
               <label for="signup-password">Create Password</label>
               <input id="signup-password" name="signup-password" type="password" placeholder="Create password" />
-              <button class="btn primary" type="submit">Sign Up</button>
+              <button class="btn primary" type="submit">Request Access</button>
             </form>
           </article>
+          <article class="panel reveal upload-box">
+            <h3>Upload Documents</h3>
+            <p class="small-note">Clients can upload contracts, IDs, lender letters, and closing files here.</p>
+            <label for="portal-file">Select file</label>
+            <input id="portal-file" name="portal-file" type="file" />
+            <label for="portal-notes">Upload notes</label>
+            <textarea id="portal-notes" name="portal-notes" placeholder="Add context for the document you are sending"></textarea>
+            <button class="btn primary" type="button">Upload File</button>
+          </article>
+        </section>
+
+        <section class="section portal-grid">
           <article class="panel reveal">
-            <h3>Portal Benefits</h3>
-            <ul>
-              <li>Save favorite homes and compare details</li>
-              <li>Track transaction milestones and paperwork</li>
-              <li>Get alerts for market matches and price updates</li>
-              <li>Message your Legacy Group team directly</li>
-            </ul>
+            <div class="section-head">
+              <h3>Milestone Tracker</h3>
+              <span class="status-pill status-live">Admin Managed</span>
+            </div>
+            <p class="small-note">Clients can view progress here. Checklist updates are controlled by Juanita or admin only.</p>
+            <div class="milestone-list">
+              <div class="milestone-item done">
+                <div>
+                  <strong>Consultation Completed</strong>
+                  <p>Initial goals, timeline, and property priorities reviewed.</p>
+                </div>
+                <span class="status-pill status-done">Complete</span>
+              </div>
+              <div class="milestone-item done">
+                <div>
+                  <strong>Pre-Approval Submitted</strong>
+                  <p>Lender documentation received and financing prep started.</p>
+                </div>
+                <span class="status-pill status-done">Complete</span>
+              </div>
+              <div class="milestone-item current">
+                <div>
+                  <strong>Active Search / Offer Prep</strong>
+                  <p>Current homes under review and next offer strategy being prepared.</p>
+                </div>
+                <span class="status-pill status-current">In Progress</span>
+              </div>
+              <div class="milestone-item">
+                <div>
+                  <strong>Inspection and Repairs</strong>
+                  <p>Inspection reports and response items will appear here once scheduled.</p>
+                </div>
+                <span class="status-pill">Pending</span>
+              </div>
+              <div class="milestone-item">
+                <div>
+                  <strong>Clear to Close</strong>
+                  <p>Final lender approval and closing package confirmation.</p>
+                </div>
+                <span class="status-pill">Pending</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel reveal">
+            <div class="section-head">
+              <h3>Portal Notes</h3>
+              <span class="status-pill">Preview</span>
+            </div>
+            <div class="note-stack">
+              <div class="note-card">
+                <strong>What clients can do</strong>
+                <ul>
+                  <li>Upload documents securely</li>
+                  <li>View milestone progress</li>
+                  <li>Review transaction notes and status updates</li>
+                </ul>
+              </div>
+              <div class="note-card">
+                <strong>What clients cannot edit</strong>
+                <ul>
+                  <li>Milestone checklist statuses</li>
+                  <li>Transaction timeline steps</li>
+                  <li>Internal admin notes</li>
+                </ul>
+              </div>
+              <div class="note-card">
+                <strong>Admin access</strong>
+                <p>Use the admin login to update checklist stages, review uploads, and manage portal activity.</p>
+                <a class="btn ghost" href="admin-login.html">Open Admin Login</a>
+              </div>
+            </div>
           </article>
         </section>
       </main>

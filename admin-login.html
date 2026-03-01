@@ -38,25 +38,28 @@
               Admin access should be limited to verified internal users with strong passwords, MFA,
               audit logs, and role-based permissions.
             </p>
+            <div class="status-text" data-setup-message></div>
           </article>
           <article class="panel reveal auth-panel">
             <h3>Admin Login</h3>
-            <form>
-              <label for="admin-email">Email</label>
-              <input id="admin-email" name="admin-email" type="email" placeholder="admin@email.com" />
-              <label for="admin-password">Password</label>
-              <input id="admin-password" name="admin-password" type="password" placeholder="Admin password" />
-              <a class="btn primary" href="admin-dashboard.html">Admin Sign In</a>
+            <form id="login-form">
+              <label for="signin-email">Email</label>
+              <input id="signin-email" name="signin-email" type="email" placeholder="admin@email.com" required />
+              <label for="signin-password">Password</label>
+              <input id="signin-password" name="signin-password" type="password" placeholder="Admin password" required />
+              <button class="btn primary" type="submit">Admin Sign In</button>
             </form>
             <div class="auth-links">
               <a href="forgot-password.html">Reset password</a>
               <a href="signin.html">Back to client login</a>
             </div>
+            <div class="status-text" data-auth-status></div>
           </article>
         </section>
       </main>
       <footer class="footer">Copyright <span data-year></span> The Legacy Group LLC (operating under Plush Realty). All rights reserved.</footer>
     </div>
     <script src="script.js"></script>
+    <script type="module" src="auth.js"></script>
   </body>
 </html>

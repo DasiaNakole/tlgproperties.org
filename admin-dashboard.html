@@ -30,47 +30,89 @@
         </nav>
       </header>
       <main>
+        <section class="section">
+          <article class="panel reveal">
+            <div class="section-head">
+              <h3>Admin Dashboard</h3>
+              <div class="section-actions">
+                <span class="status-pill" data-user-badge>Loading...</span>
+                <button class="btn ghost" id="admin-signout" type="button">Sign Out</button>
+              </div>
+            </div>
+            <div data-admin-gate class="status-text">Checking admin session...</div>
+            <div class="status-text" data-admin-status></div>
+          </article>
+        </section>
+
         <section class="section portal-grid">
           <article class="panel reveal">
             <div class="section-head">
               <h3>Blog Manager</h3>
               <span class="status-pill status-live">Admin Only</span>
             </div>
-            <div class="note-stack">
-              <div class="note-card"><strong>Add a post</strong><p>Create a new title, category, summary, and article file.</p><a class="btn primary" href="blog.html">Create New Post</a></div>
-              <div class="note-card"><strong>Current blog files</strong><ul class="manage-list"><li><span>blog-home-tour.html</span><button class="btn danger" type="button">Delete</button></li><li><span>blog-homeowners-insurance.html</span><button class="btn danger" type="button">Delete</button></li><li><span>blog-listing-appeal.html</span><button class="btn danger" type="button">Delete</button></li><li><span>blog-budget.html</span><button class="btn danger" type="button">Delete</button></li><li><span>blog-neighborhood-signals.html</span><button class="btn danger" type="button">Delete</button></li><li><span>blog-buy-now-or-wait.html</span><button class="btn danger" type="button">Delete</button></li></ul></div>
-            </div>
+            <form id="blog-post-form" class="stack-form">
+              <label for="post-title">Title</label>
+              <input id="post-title" name="post-title" type="text" placeholder="Blog post title" required />
+              <label for="post-slug">Slug</label>
+              <input id="post-slug" name="post-slug" type="text" placeholder="optional-custom-slug" />
+              <label for="post-category">Category</label>
+              <input id="post-category" name="post-category" type="text" placeholder="Buying, Insurance, Selling..." required />
+              <label for="post-excerpt">Excerpt</label>
+              <textarea id="post-excerpt" name="post-excerpt" placeholder="Short summary for the blog card" required></textarea>
+              <label for="post-cover">Cover Image URL</label>
+              <input id="post-cover" name="post-cover" type="url" placeholder="https://..." />
+              <label for="post-content">Article Content</label>
+              <textarea id="post-content" name="post-content" placeholder="Write the post body here. Separate paragraphs with blank lines." required></textarea>
+              <label for="post-status">Status</label>
+              <select id="post-status" name="post-status">
+                <option value="draft">Draft</option>
+                <option value="published">Published</option>
+              </select>
+              <button class="btn primary" type="submit">Save Blog Post</button>
+            </form>
+            <ul class="manage-list" data-admin-blog-list>
+              <li><span>Loading blog posts...</span></li>
+            </ul>
           </article>
           <article class="panel reveal">
             <div class="section-head">
-              <h3>Demo File Manager</h3>
+              <h3>Demo Files</h3>
               <span class="status-pill">Uploads</span>
             </div>
-            <div class="note-stack">
-              <div class="note-card"><strong>Upload demo or closing files</strong><label for="demo-file">Choose file</label><input id="demo-file" type="file" /><a class="btn primary" href="#">Upload Demo File</a></div>
-              <div class="note-card"><strong>Stored files</strong><ul class="manage-list"><li><span>buyer-intake-checklist.pdf</span><button class="btn danger" type="button">Delete</button></li><li><span>transaction-milestones-demo.pdf</span><button class="btn danger" type="button">Delete</button></li><li><span>closing-documents-sample.pdf</span><button class="btn danger" type="button">Delete</button></li></ul></div>
-            </div>
+            <form id="demo-file-form" class="stack-form">
+              <label for="demo-file">Choose file</label>
+              <input id="demo-file" name="demo-file" type="file" required />
+              <label for="demo-description">Description</label>
+              <textarea id="demo-description" name="demo-description" placeholder="What is this file for?"></textarea>
+              <button class="btn primary" type="submit">Upload Demo File</button>
+            </form>
+            <ul class="manage-list" data-demo-files>
+              <li><span>Loading demo files...</span></li>
+            </ul>
           </article>
         </section>
+
         <section class="section two-col">
+          <article class="panel reveal">
+            <h3>Pending Client Access</h3>
+            <ul class="manage-list" data-pending-clients>
+              <li><span>Loading client accounts...</span></li>
+            </ul>
+          </article>
           <article class="panel reveal">
             <h3>Admin Security Checklist</h3>
             <ul>
               <li>Require MFA for admin accounts</li>
               <li>Log every file upload, delete, and milestone change</li>
               <li>Separate admin and client roles at the database layer</li>
-              <li>Use signed URLs for document access</li>
+              <li>Use private storage buckets and signed access URLs</li>
             </ul>
-          </article>
-          <article class="panel reveal">
-            <h3>Build Note</h3>
-            <p class="small-note">This dashboard is a front-end control concept only. Real add/delete actions and secure portal protection require server-side auth, storage policies, and database rules.</p>
-            <a class="btn ghost" href="admin-login.html">Back to Admin Login</a>
           </article>
         </section>
       </main>
       <footer class="footer">Copyright <span data-year></span> The Legacy Group LLC (operating under Plush Realty). All rights reserved.</footer>
     </div>
     <script src="script.js"></script>
+    <script type="module" src="admin-dashboard.js"></script>
   </body>
 </html>

@@ -33,36 +33,39 @@
         <section class="section two-col">
           <article class="hero-card reveal">
             <div class="eyebrow">Account Request</div>
-            <h2>Create your portal account request.</h2>
+            <h2>Create a secure portal account request.</h2>
             <p>
-              New accounts should be reviewed by admin before portal access is fully activated.
-              That keeps sensitive transaction files limited to verified clients only.
+              New client accounts start in pending status until admin approval. That keeps sensitive
+              documents and milestones limited to verified users only.
             </p>
             <div class="auth-links stacked">
               <a href="signin.html">Back to login</a>
               <a href="forgot-password.html">Forgot password?</a>
             </div>
+            <div class="status-text" data-setup-message></div>
           </article>
           <article class="panel reveal auth-panel">
             <h3>Create Account</h3>
-            <form>
+            <form id="signup-form">
               <label for="signup-name">Full Name</label>
-              <input id="signup-name" name="signup-name" type="text" placeholder="Your full name" />
+              <input id="signup-name" name="signup-name" type="text" placeholder="Your full name" required />
               <label for="signup-email">Email</label>
-              <input id="signup-email" name="signup-email" type="email" placeholder="you@email.com" />
+              <input id="signup-email" name="signup-email" type="email" placeholder="you@email.com" required />
               <label for="signup-phone">Phone</label>
-              <input id="signup-phone" name="signup-phone" type="tel" placeholder="(555) 123-4567" />
+              <input id="signup-phone" name="signup-phone" type="tel" placeholder="(555) 123-4567" required />
               <label for="signup-password">Create Password</label>
-              <input id="signup-password" name="signup-password" type="password" placeholder="Create password" />
+              <input id="signup-password" name="signup-password" type="password" placeholder="Create password" required />
               <label for="signup-confirm">Confirm Password</label>
-              <input id="signup-confirm" name="signup-confirm" type="password" placeholder="Confirm password" />
-              <a class="btn primary" href="signin.html">Submit Request</a>
+              <input id="signup-confirm" name="signup-confirm" type="password" placeholder="Confirm password" required />
+              <button class="btn primary" type="submit">Submit Request</button>
             </form>
+            <div class="status-text" data-auth-status></div>
           </article>
         </section>
       </main>
       <footer class="footer">Copyright <span data-year></span> The Legacy Group LLC (operating under Plush Realty). All rights reserved.</footer>
     </div>
     <script src="script.js"></script>
+    <script type="module" src="auth.js"></script>
   </body>
 </html>

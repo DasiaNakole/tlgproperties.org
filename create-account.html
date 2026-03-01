@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Legacy Group LLC | Client Portal Login</title>
+    <title>The Legacy Group LLC | Create Portal Account</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -29,40 +29,38 @@
           <a href="contact.html">Contact</a>
         </nav>
       </header>
-
       <main>
-        <section class="hero">
+        <section class="section two-col">
           <article class="hero-card reveal">
-            <div class="eyebrow">Secure Portal Access</div>
-            <h2>Sign in before viewing documents, milestones, or transaction details.</h2>
+            <div class="eyebrow">Account Request</div>
+            <h2>Create your portal account request.</h2>
             <p>
-              Client records, uploaded files, and milestone progress are treated as sensitive. This
-              public page only provides access entry points. Protected portal content sits behind
-              login in the live build plan.
+              New accounts should be reviewed by admin before portal access is fully activated.
+              That keeps sensitive transaction files limited to verified clients only.
             </p>
-            <div class="security-banner">
-              <strong>Security priority</strong>
-              <p>For a real launch, this should use encrypted storage, role-based access, audit logs, and admin-only checklist controls.</p>
+            <div class="auth-links stacked">
+              <a href="signin.html">Back to login</a>
+              <a href="forgot-password.html">Forgot password?</a>
             </div>
           </article>
           <article class="panel reveal auth-panel">
-            <h3>Client Login</h3>
+            <h3>Create Account</h3>
             <form>
-              <label for="signin-email">Email</label>
-              <input id="signin-email" name="signin-email" type="email" placeholder="you@email.com" />
-              <label for="signin-password">Password</label>
-              <input id="signin-password" name="signin-password" type="password" placeholder="Password" />
-              <a class="btn primary" href="client-portal.html">Sign In</a>
+              <label for="signup-name">Full Name</label>
+              <input id="signup-name" name="signup-name" type="text" placeholder="Your full name" />
+              <label for="signup-email">Email</label>
+              <input id="signup-email" name="signup-email" type="email" placeholder="you@email.com" />
+              <label for="signup-phone">Phone</label>
+              <input id="signup-phone" name="signup-phone" type="tel" placeholder="(555) 123-4567" />
+              <label for="signup-password">Create Password</label>
+              <input id="signup-password" name="signup-password" type="password" placeholder="Create password" />
+              <label for="signup-confirm">Confirm Password</label>
+              <input id="signup-confirm" name="signup-confirm" type="password" placeholder="Confirm password" />
+              <a class="btn primary" href="signin.html">Submit Request</a>
             </form>
-            <div class="auth-links">
-              <a href="forgot-password.html">Forgot password?</a>
-              <a href="create-account.html">Create account</a>
-              <a href="admin-login.html">Admin login</a>
-            </div>
           </article>
         </section>
       </main>
-
       <footer class="footer">Copyright <span data-year></span> The Legacy Group LLC (operating under Plush Realty). All rights reserved.</footer>
     </div>
     <script src="script.js"></script>

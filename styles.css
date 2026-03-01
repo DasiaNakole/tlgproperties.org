@@ -544,3 +544,79 @@ textarea {
 .card h4 a:hover {
   color: var(--gold-deep);
 }
+
+.auth-panel .btn {
+  margin-top: 6px;
+}
+
+.auth-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  font-family: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
+}
+
+.auth-links.stacked {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.auth-links a {
+  color: var(--gold-deep);
+}
+
+.security-banner {
+  margin-top: 20px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(47, 103, 153, 0.28);
+  background: rgba(255, 255, 255, 0.42);
+}
+
+.security-banner strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+}
+
+.security-banner p {
+  margin: 0;
+  font-family: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
+  color: var(--ink-soft);
+}
+
+.manage-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+  display: grid;
+  gap: 10px;
+}
+
+.manage-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.46);
+}
+
+.btn.danger {
+  background: #b65656;
+  color: #fff;
+}
+
+.btn.danger:hover {
+  box-shadow: 0 10px 22px rgba(182, 86, 86, 0.22);
+}
+
+@media (max-width: 640px) {
+  .manage-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
